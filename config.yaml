@@ -1,0 +1,59 @@
+# --- Core Settings ---
+# Name of the environment variable holding the Discord Bot Token (defined in your .env file)
+discord_token_env: "DISCORD_BOT_TOKEN" # Default: DISCORD_BOT_TOKEN
+# Your Discord Server's unique ID.
+guild_id: 123456789012345678 # MUST BE SET
+
+# --- Role IDs ---
+# Role IDs from your server.
+roles:
+  # Role required to use /gatekeeper commands (e.g., Moderators). Set to 0 or null to allow only developers.
+  general_command_role_id: 123456789012345678
+  # Role required to use /dev commands (e.g., Bot Admins). Set to 0 or null to disable dev commands.
+  developer_role_id: 123456789012345678
+  # The ID of the role assigned to unverified users. The bot tracks users with this role.
+  unverified_role_id: 1351008336545517736 # MUST BE SET 
+
+# --- Channel IDs ---
+# Channel IDs from your server.
+channels:
+  # Channel for general command summaries, startup status, and forwarded DMs.
+  general_responses_channel_id: 1356609990317948084 
+  # Channel for detailed startup logs, scan logs, errors, dev command outputs.
+  dev_logs_channel_id: 1354679113366965426 
+  # The "gate" or "verify-here" channel where /poke gate pings occur.
+  gate_channel_id: 1351005536655517736 
+  # Channel where the bot posts details about tracked users who leave the server.
+  leavers_channel_id: 1356610120426999399 
+
+# --- Timers & Intervals ---
+timers:
+  # How often (in minutes) the bot automatically scans members.
+  scan_interval_minutes: 60
+  # How often (in minutes) the bot automatically backs up the database.
+  backup_interval_minutes: 30
+  # Cooldown (in hours) for the manual /gatekeeper scanlurkers command.
+  scan_cooldown_hours: 1.0
+
+# --- Message Templates ---
+# Static text used in various bot messages and embeds.
+messages:
+  embed_footer: "Contact Staff | Gatekeeper Bot"
+  embed_header: "Server Verification System"
+  # Message sent via DM with /poke dm. Use {user_mention} or {user_username}.
+  poke_dm_message: "Hello {user_mention}, this is a friendly reminder to complete the verification process in our server!"
+  # Message sent to the gate channel with /poke gate. Use {user_mentions} (comma-separated list).
+  poke_gate_message: "Attention {user_mentions}: Please complete your verification to gain access to the server."
+
+# --- Database & Logging ---
+database:
+  # Path where the SQLite database file will be stored. Relative to bot.py.
+  path: "data/gatekeeper.db"
+  # Directory where database backups will be saved. Relative to bot.py.
+  backup_dir: "data/backups"
+
+logging:
+  # Path where the log file will be stored. Relative to bot.py.
+  log_file: "logs/gatekeeper.log"
+  # Logging level for file and console output (DEBUG, INFO, WARNING, ERROR, CRITICAL). Use DEBUG for detailed troubleshooting.
+  level: "INFO" # Change to DEBUG for verbose logs
