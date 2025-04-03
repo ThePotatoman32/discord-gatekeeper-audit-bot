@@ -18,6 +18,41 @@ Work in progress Discord Bot that will eventually act as a Gatekeeper and an aud
 *   **👋 Leave Logging**: Logs detailed information about tracked users when they leave the server to a designated channel.
 *   **✅ Startup Sequence & Audit**: Performs database health checks and data consistency audits on startup, reporting status to designated channels. Initializes the database schema on first run. Runs an initial scan shortly after startup.
 
+## Installation (for Windows)
+
+1. Download [Python 3.12](https://www.python.org/downloads/release/python-3120/)
+
+2. Install Python and make sure you tick “Add to path” in the installer.
+
+3. Download and extract this repository to a folder.
+
+4. Open CMD as Admin and type `cd C:/your_extracted_folder` to navigate the terminal to the bot directory where the bot.py is located.
+
+5. Upgrade PIP by typing `py -m pip install --upgrade pip`
+
+8. Install bot dependencies by typing `pip install -r requirements.txt`
+
+9. Update your `config.yaml` file according to the details below in the config section.
+
+10. Create a Discord application and bot:
+   - Go to the [Discord Developer Portal](https://discord.com/developers/applications)
+   - Click "New Application" and configure your application
+   - Go to the "Bot" tab and click "Add Bot"
+   - Under the bot's username, click "Copy" to copy the bot token
+   - Paste the bot token in your `.env` file
+   - Under "Privileged Gateway Intents", enable all intents
+   - Go to the "Installation" tab and enable "Guild Install"
+   - Select the "bot" and "applications.commands" scopes 
+   - For bot permissions, select "Administrator"
+   - Save all and copy the generated URL and use it to invite the bot to your server
+  
+6. Open and update everything inside `config.yaml`, including the Role and Channel IDs used by the bot. See configuration section below.
+
+7. Run the bot:
+   ```
+   python bot.py
+   ```
+
 ## Configuration (`config.yaml`)
 
 This file is essential for controlling the bot's behavior.
