@@ -1,49 +1,55 @@
+# Enter all IDs as an integer without quotation marks
+# eg. guild_id: 1356622360317948084
+
 # --- Core Settings ---
 # Name of the environment variable holding the Discord Bot Token (defined in your .env file)
-discord_token_env: "DISCORD_BOT_TOKEN" # Default: DISCORD_BOT_TOKEN
+# Don't enter your actual bot token here. Enter it in your .env file, leave this as default.
+discord_token_env: "DISCORD_BOT_TOKEN" 
 # Your Discord Server's unique ID.
-guild_id: 123456789012345678 # MUST BE SET
+guild_id: YOUR_GUILD_ID 
 
 # --- Role IDs ---
 # Role IDs from your server.
 roles:
   # Role required to use /gatekeeper commands (e.g., Moderators). Set to 0 or null to allow only developers.
-  general_command_role_id: 123456789012345678
-  # Role required to use /dev commands (e.g., Bot Admins). Set to 0 or null to disable dev commands.
-  developer_role_id: 123456789012345678
+  general_command_role_id: YOUR_ADMIN_ROLE_ID 
+  # Role required to use /dev commands (e.g., Bot Admins). Set to 0 or null to disable dev commands. 
+  developer_role_id: YOUR_DEV_ROLE_ID 
   # The ID of the role assigned to unverified users. The bot tracks users with this role.
-  unverified_role_id: 1351008336545517736 # MUST BE SET 
+  unverified_role_id: YOUR_UNVERIFIED_ROLE_ID 
 
 # --- Channel IDs ---
 # Channel IDs from your server.
 channels:
-  # Channel for general command summaries, startup status, and forwarded DMs.
-  general_responses_channel_id: 1356609990317948084 
-  # Channel for detailed startup logs, scan logs, errors, dev command outputs.
-  dev_logs_channel_id: 1354679113366965426 
+  # Consolidated channel for ALL bot logs: startup, errors, command summaries, scan details, forwarded DMs, etc.
+  log_channel_id: YOUR_LOG_CHANNEL_ID 
+  # Channel where DMs sent TO the bot will be forwarded for staff review and replies.
+  dm_forward_channel_id: YOUR_DM_FORWARD_CHANNEL_ID 
   # The "gate" or "verify-here" channel where /poke gate pings occur.
-  gate_channel_id: 1351005536655517736 
+  gate_channel_id: YOUR_GATE_CHANNEL_ID 
   # Channel where the bot posts details about tracked users who leave the server.
-  leavers_channel_id: 1356610120426999399 
+  leavers_channel_id: YOUR_LEAVERS_CHANNEL_ID 
 
 # --- Timers & Intervals ---
 timers:
   # How often (in minutes) the bot automatically scans members.
-  scan_interval_minutes: 60
+  scan_interval_minutes: 60 # Default: 60 minutes
   # How often (in minutes) the bot automatically backs up the database.
-  backup_interval_minutes: 30
+  backup_interval_minutes: 30 # Default: 30 minutes
   # Cooldown (in hours) for the manual /gatekeeper scanlurkers command.
-  scan_cooldown_hours: 1.0
+  scan_cooldown_hours: 1.0 # Default: 1 hour
 
 # --- Message Templates ---
 # Static text used in various bot messages and embeds.
 messages:
   embed_footer: "Contact Staff | Gatekeeper Bot"
-  embed_header: "Server Verification System"
+  embed_header: "Gatekeeper"
   # Message sent via DM with /poke dm. Use {user_mention} or {user_username}.
-  poke_dm_message: "Hello {user_mention}, this is a friendly reminder to complete the verification process in our server!"
+  poke_dm_message: "Attention {user_mention}, you need to verify!"
   # Message sent to the gate channel with /poke gate. Use {user_mentions} (comma-separated list).
-  poke_gate_message: "Attention {user_mentions}: Please complete your verification to gain access to the server."
+  poke_gate_message: "Attention {user_mentions}: you all need to verify!"
+  # Message prefix sent via DM when a staff member replies via the dm_forward_channel.
+  staff_reply_prefix: "**Staff Response:** "
 
 # --- Database & Logging ---
 database:
@@ -56,4 +62,4 @@ logging:
   # Path where the log file will be stored. Relative to bot.py.
   log_file: "logs/gatekeeper.log"
   # Logging level for file and console output (DEBUG, INFO, WARNING, ERROR, CRITICAL). Use DEBUG for detailed troubleshooting.
-  level: "INFO" # Change to DEBUG for verbose logs
+  level: "INFO" # Change to DEBUG for verbose logs including SQL

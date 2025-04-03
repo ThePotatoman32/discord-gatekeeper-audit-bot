@@ -1,4 +1,13 @@
-discord.py>=2.3.2
-aiosqlite>=0.19.0
-PyYAML>=6.0.1
-python-dotenv>=1.0.0
+# Discord Bot Core Library (v2.x required for app commands, intents, UI)
+# Using ~=2.3 ensures compatibility within the 2.3.x series. Adjust if needed.
+discord.py~=2.3
+
+# Asynchronous SQLite database access
+aiosqlite>=0.17.0
+
+# YAML configuration file parsing (use safe_load)
+# Specify >=6.0 for recent features and security patches
+PyYAML>=6.0
+
+# Loading environment variables from .env files (for DISCORD_TOKEN_ENV)
+python-dotenv>=0.19.0
