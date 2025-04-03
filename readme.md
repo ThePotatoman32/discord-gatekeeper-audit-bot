@@ -30,11 +30,9 @@ Work in progress Discord Bot that will eventually act as a Gatekeeper and an aud
 
 5. Upgrade PIP by typing `py -m pip install --upgrade pip`
 
-8. Install bot dependencies by typing `pip install -r requirements.txt`
+6. Install bot dependencies by typing `pip install -r requirements.txt`
 
-9. Update your `config.yaml` file according to the details below in the config section.
-
-10. Create a Discord application and bot:
+7. Create a Discord application and bot:
    - Go to the [Discord Developer Portal](https://discord.com/developers/applications)
    - Click "New Application" and configure your application
    - Go to the "Bot" tab and click "Add Bot"
@@ -46,9 +44,9 @@ Work in progress Discord Bot that will eventually act as a Gatekeeper and an aud
    - For bot permissions, select "Administrator"
    - Save all and copy the generated URL and use it to invite the bot to your server
   
-6. Open and update everything inside `config.yaml`, including the Role and Channel IDs used by the bot. See configuration section below.
+8. Open and update everything inside `config.yaml`, including the Role and Channel IDs used by the bot. See configuration section below.
 
-7. Run the bot:
+9. Run the bot:
    ```
    python bot.py
    ```
